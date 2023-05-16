@@ -1,0 +1,25 @@
+﻿
+<head>
+    <link href="Navigation.razor.css" rel="stylesheet" />
+</head>
+
+
+<PageTitle>Navigation</PageTitle>
+
+<div>
+    <nav>
+        <div class="linkbox">
+            <NavLink class="link" ActiveClass="nav-active" href="" Match=@NavLinkMatch.All >
+                Home
+            </NavLink>
+        </div>
+
+        <div class="linkbox">
+            <NavLink class="link" ActiveClass="nav-active" href="calculator" Match=@NavLinkMatch.All>
+                Calculator
+            </NavLink>
+        </div>
+
+
+    </nav>
+</div>

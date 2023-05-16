@@ -1,44 +1,49 @@
 ﻿@page "/calculator"
 <head>
-    <link href="css/Calculator.css" rel="stylesheet" />
+    <link href="/css/Calculator.css" rel="stylesheet" />
+
 </head>
 
-<Navigation />
 
-<h3>Calculator</h3>
-<p>Here is a basic calculator that you can use</p>
+<div id="mainBody">
+    <h3>Calculator</h3>
+    <p>Here is a basic calculator that you can use</p>
 
-<div>
-    First number: @(number1)    
-    Second number: @(number2)
-    Answer: @(answer)
+    <div>
+        First number: @(number1)
+        Second number: @(number2)
+        Answer: @(answer)
+    </div>
+
+    <div>
+        <table id="table">
+            <tr>
+                <th class="border" @onclick="() => AddNumber(7)">7</th>
+                <th class="border" @onclick="() => AddNumber(8)">8</th>
+                <th class="border" @onclick="() => AddNumber(9)">9</th>
+            </tr>
+            <tr>
+                <th class="border" @onclick="() => AddNumber(4)">4</th>
+                <th class="border" @onclick="() => AddNumber(5)">5</th>
+                <th class="border" @onclick="() => AddNumber(6)">6</th>
+            </tr>
+            <tr>
+                <th class="border" @onclick="() => AddNumber(1)">1</th>
+                <th class="border" @onclick="() => AddNumber(2)">2</th>
+                <th class="border" @onclick="() => AddNumber(3)">3</th>
+            </tr>
+            <tr>
+                <th class="border" @onclick="() => AddNumber(0)">0</th>
+                <th class="border" id="calculate" colspan="2" @onclick="Calculate">Calculate</th>
+            </tr>
+            <tr>
+                <th class="border" id="reset" colspan="3" @onclick="Reset">Reset</th>
+            </tr>
+        </table>
+    </div>
 </div>
 
 
-<table id="table">
-    <tr >
-        <th class="border" @onclick="() => AddNumber(7)">7</th>
-        <th class="border" @onclick="() => AddNumber(8)">8</th>
-        <th class="border" @onclick="() => AddNumber(9)">9</th>
-    </tr>
-    <tr>
-        <th class="border" @onclick="() => AddNumber(4)">4</th>
-        <th class="border" @onclick="() => AddNumber(5)">5</th>
-        <th class="border" @onclick="() => AddNumber(6)">6</th>
-    </tr>
-    <tr>
-        <th class="border" @onclick="() => AddNumber(1)">1</th>
-        <th class="border" @onclick="() => AddNumber(2)">2</th>
-        <th class="border" @onclick="() => AddNumber(3)">3</th>
-    </tr>
-    <tr>
-        <th class="border" @onclick="() => AddNumber(0)">0</th>
-        <th class="border" id="calculate" colspan="2" @onclick="Calculate">Calculate</th>
-    </tr>
-    <tr>
-        <th class="border" id="reset" colspan="3" @onclick="Reset">Reset</th>
-    </tr>
-</table>
 @code {
     private int number1 = 0;
     private int number2 = 0;

@@ -1,0 +1,36 @@
+﻿* {
+    #background-color: rgba(0, 5, 255, 0.12);
+}
+
+#Navigation {
+    position: fixed;
+    left: 0px;
+    width: 150px;
+}
+
+#mainBody{
+    padding: 150px;
+}
+
+.linkbox {
+    font-family: Cambria;
+    font-size: 20px;
+
+    border: solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 2px;
+
+    padding: 10px 10px 10px 10px;
+    margin: 2px 10px 2px 0px;
+
+   
+}
+
+::deep .nav-active {
+    background-color: rgb(152 220 205);
+}
+
+.linkbox:active {
+    background-color: rgb(152 220 205);
+}
