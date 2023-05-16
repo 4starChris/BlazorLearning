@@ -1,6 +1,10 @@
-﻿* {
-    #background-color: rgba(0, 5, 255, 0.12);
+﻿/*
+
+* {
+    background-color: rgba(0, 5, 255, 0.12);
 }
+
+*/
 
 #Navigation {
     position: fixed;
